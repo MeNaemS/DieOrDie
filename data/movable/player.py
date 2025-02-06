@@ -1,6 +1,6 @@
 import pygame
 from data.movable.movable import Movable
-from utils import load_image
+from utils import load_image, window
 
 
 class Player(Movable):
@@ -14,14 +14,14 @@ class Player(Movable):
         self.protected = False
 
     def move(self, up, left, down, right):
-        if up:
+        if up and self.rect.top - self.speed > 0:
             self.rect.y -= self.speed
-        if left:
+        if left and self.rect.left - self.speed > 0:
             self.rect.x -= self.speed
             self.flip_left = True
-        if down:
+        if down and self.rect.bottom + self.speed < window.get_height():
             self.rect.y += self.speed
-        if right:
+        if right and self.rect.right + self.speed < window.get_width():
             self.rect.x += self.speed
 
     def update(self):

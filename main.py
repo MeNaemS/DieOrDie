@@ -125,7 +125,7 @@ def lose_game(player):
                 main()
         window.fill('lightgreen')
         title = FONT.render(f'You lose. {message}', True, 'black')
-        subtitle = FONT.render(f'please, press any key to restart', True, 'black')
+        subtitle = FONT.render('please, press any key to restart', True, 'black')
         window.blit(title, (WIDTH // 2 - title.get_rect().width // 2, HEIGHT // 2 - title.get_rect().height // 2))
         window.blit(subtitle, (WIDTH // 2 - subtitle.get_rect().width // 2, HEIGHT // 2 + 2))
         pg.display.update()
