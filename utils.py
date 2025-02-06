@@ -6,7 +6,8 @@ pg.init()
 pg.font.init()
 pg.mixer.init()
 SIZE = WIDTH, HEIGHT = 700, 700
-pg.display.set_caption('die_or_die')
+pg.display.set_caption('DieOrDie')
+pg.display.set_icon(pg.image.load('./data/sprites/icon.png'))
 window = pg.display.set_mode(SIZE)
 FONT = pg.font.Font('data/fonts/PermanentMarker-Regular.ttf', 25)
 
